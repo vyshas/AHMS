@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- DW6 -->
+<head>
+<!-- Copyright 2005 Macromedia, Inc. All rights reserved. -->
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>Home Page</title>
+<!-- TemplateEndEditable -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="../mm_health_nutr.css" type="text/css" />
+<script language="JavaScript" type="text/javascript">
+//--------------- LOCALIZEABLE GLOBALS ---------------
+var d=new Date();
+var monthname=new Array("January","February","March","April","May","June","July","August","September","October","November","December");
+//Ensure correct for language. English is "January 1, 2004"
+var TODAY = monthname[d.getMonth()] + " " + d.getDate() + ", " + d.getFullYear();
+//---------------   END LOCALIZEABLE   ---------------
+</script>
+<style type="text/css">
+<!--
+.style1 {font-size: 14px}
+.style2 {font-size: 14px; font-weight: bold; }
+-->
+</style>
+<!-- TemplateBeginEditable name="head" --><!-- TemplateEndEditable -->
+</head>
+<body bgcolor="#F4FFE4">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr bgcolor="#D5EDB3">
+    <td colspan="3" rowspan="2"><img src="../logo3.jpg" alt="Header image" width="92" height="100" border="0" /><!-- TemplateBeginEditable name="EditRegion2" --><!-- TemplateEndEditable --></td>
+    <td height="50" colspan="3" id="logo" valign="bottom" align="center" nowrap="nowrap"> ADI<!-- TemplateBeginEditable name="EditRegion1" -->EditRegion1<!-- TemplateEndEditable -->CHUNCHANAGIRI INSTITUTE OF TECHNOLOGY</td>
+    <td width="15">&nbsp;</td>
+  </tr>
+
+  <tr bgcolor="#D5EDB3">
+    <td height="51" colspan="3" id="tagline" valign="top" align="center"> AUTOMATED HIERARCHICAL MANAGEMENT SYSTEM </td>
+	<td width="15">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="7" bgcolor="#5C743D"><img src="../mm_spacer.gif" alt="" width="1" height="2" border="0" /></td>
+  </tr>
+
+  <tr>
+    <td colspan="7" bgcolor="#99CC66" background="../mm_dashed_line.gif"><img src="../mm_dashed_line.gif" alt="line decor" width="4" height="3" border="0" /></td>
+  </tr>
+
+  <tr bgcolor="#99CC66">
+  	<td colspan="7" id="dateformat" height="20">&nbsp;&nbsp;<script language="JavaScript" type="text/javascript">
+      document.write(TODAY);	</script></td>
+  </tr>
+  <tr>
+    <td colspan="7" bgcolor="#99CC66" background="../mm_dashed_line.gif"><img src="../mm_dashed_line.gif" alt="line decor" width="4" height="3" border="0" /></td>
+  </tr>
+
+  <tr>
+    <td colspan="7" bgcolor="#5C743D"><img src="../mm_spacer.gif" alt="" width="1" height="2" border="0" /></td>
+  </tr>
+
+ <tr>
+    <td width="165" valign="top" bgcolor="#5C743D">
+	<table border="0" cellspacing="0" cellpadding="0" width="165" id="navigation">
+	  <!-- TemplateBeginEditable name="EditRegion3" -->
+	  <tr>
+        <td width="165">&nbsp;</td>
+	    </tr>
+      <tr>
+        <td width="165"><a href="../home.html" title="Home">HOME</a></td>
+      </tr>
+      <tr>
+        <td width="165"><a href="../login/login.html" title="Login">LOGIN</a></td>
+      </tr>
+      <tr>
+        <td width="165"><a href="../services/services.html" title="Services">SERVICES</a></td>
+      </tr>
+      <tr>
+        <td width="165"><a href="../aboutus/aboutus.html" title="About Us">ABOUT US</a></td>
+      </tr>
+      <tr>
+        <td width="165"><a href="../contactus/contactus.html" title="Contact">CONTACT</a></td>
+      </tr>
+	  <!-- TemplateEndEditable -->
+	</table>
+ 	 <br />
+  	&nbsp;<br />
+  	&nbsp;<br />
+  	&nbsp;<br /> 	</td>
+    <td width="50"><img src="../mm_spacer.gif" alt="" width="50" height="1" border="0" /></td>
+    <td colspan="2" valign="top"><img src="../mm_spacer.gif" alt="" width="305" height="1" border="0" /><br />
+	&nbsp;<br />
+	&nbsp;<br />
+	<table border="0" cellspacing="0" cellpadding="0" width="346">
+        <tr>
+          <td width="346" class="pageName"><!-- TemplateBeginEditable name="EditRegion4" -->EditRegion4<!-- TemplateEndEditable --></td>
+		</tr>
+
+		<tr>
+          <td class="bodyText"><!-- TemplateBeginEditable name="EditRegion5" -->EditRegion5<!-- TemplateEndEditable -->
+            <p class="style2">&nbsp;&nbsp;&nbsp; </p>
+          </td>
+        </tr>
+      </table>
+	 
+	<p><br />
+	  &nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p><br />	
+    </p></td>
+    <td width="50"><!-- TemplateBeginEditable name="EditRegion6" --><img src="../mm_spacer.gif" alt="" width="50" height="1" border="0" /><!-- TemplateEndEditable --></td>
+  <td width="190" valign="top"><br />
+		&nbsp;<br />
+		<table border="0" cellspacing="0" cellpadding="0" width="190" id="leftcol">
+
+	   <tr>
+       <td width="10"><img src="../mm_spacer.gif" alt="" width="10" height="1" border="0" /></td>
+		<td width="170" class="smallText"><br />
+			<p><span class="subHeader">TITLE HERE</span><br />
+			Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam. </p>
+
+			<p><span class="subHeader">TITLE HERE</span><br />
+			Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam. </p>
+
+			<p><span class="subHeader">TITLE HERE</span><br />
+			Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam. </p>
+
+			 <br />
+			&nbsp;<br />          </td>
+         <td width="10">&nbsp;</td>
+        </tr>
+      </table>	</td>
+	<td width="15">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="165">&nbsp;</td>
+    <td width="50">&nbsp;</td>
+    <td width="4">&nbsp;</td>
+    <td width="301">&nbsp;</td>
+    <td width="50">&nbsp;</td>
+    <td width="190">&nbsp;</td>
+	<td width="15">&nbsp;</td>
+  </tr>
+</table>
+</body>
+</html>

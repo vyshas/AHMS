@@ -1,0 +1,21 @@
+<html>
+<body>
+<form method="get" action="">
+<select name="f" onchange="this.form.submit();">
+			<option value="cp" >User Control Panel</option>
+			<option value="pm" >Private Messages</option>
+			<option value="subs" >Subscriptions</option>
+			<option value="wol" >Who's Online</option>
+			<option value="search" >Search Forums</option>
+			<option value="home" >Forums Home</option>
+
+
+</select>
+<?
+$res=$_POST["f"];
+echo $res;
+?>
+
+</form>
+</body>
+</html>

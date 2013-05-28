@@ -1,0 +1,372 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- DW6 -->
+<head>
+<!-- Copyright 2005 Macromedia, Inc. All rights reserved. -->
+<title>Employment Page</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="../../mm_health_nutr.css" />
+
+<script language="JavaScript" type="text/javascript">
+
+function IsBlank(s)
+{
+ if(s.charAt(0)=="") 
+  return true;
+ else 
+  return false;
+}
+
+
+function validate_name()
+{
+ var str=document.employee.name1.value;
+ if(IsBlank(str))
+  { 
+    alert("The name field cannot be empty !");
+
+    return false;
+  } 
+     return true;
+}
+
+function validate_email()
+{
+ var str=document.employee.Text2.value;
+ if(IsBlank(str))
+  { 
+    alert("The email field cannot be empty !");
+
+    return false;
+  } 
+
+ if(IsValid())
+ {
+  return true;
+ }
+return false;
+
+}
+
+function IsValid()
+{
+var str=document.employee.Text2.value;
+len=str.length;
+for(i=1;i<len;i++)
+{
+if(str.charAt(i)=="@")
+{
+return true;
+}
+}
+alert("You have entered invalid email address");
+return false;
+}
+
+function processform()
+{
+
+if(!validate_name(document.employee.name1.value))
+{
+ return false;
+}
+
+if(!validate_email(document.employee.Text2.value))
+{
+ return false;
+}
+
+
+
+if(IsValid())
+ return true;
+
+}
+
+
+//--------------- LOCALIZEABLE GLOBALS ---------------
+var d=new Date();
+var monthname=new Array("January","February","March","April","May","June","July","August","September","October","November","December");
+//Ensure correct for language. English is "January 1, 2004"
+var TODAY = monthname[d.getMonth()] + " " + d.getDate() + ", " + d.getFullYear();
+//---------------   END LOCALIZEABLE   ---------------
+</script>
+
+
+<style type="text/css">
+<!--
+.style2 {
+	font-size: 12px;
+	font-weight: bold;
+}
+.form-noindent {background-color: #ffffff; border: #C3D9FF 1px solid}
+.gaia {font-family: Arial, Helvetica, sans-serif; font-size: smaller; }
+.gaia {font-family: Arial, Helvetica, sans-serif; font-size: 70%; }
+.gaia {font-family: Arial, Helvetica, sans-serif; font-size: 70%; }
+.gaia {font-family: Arial, Helvetica, sans-serif; font-size: smaller; }
+.gaia {font-family: Arial, Helvetica, sans-serif; font-size: smaller; }
+.gaia {font-family: Arial, Helvetica, sans-serif; font-size: smaller; }
+.gaia {font-family: arial, sans-serif; font-size: smaller; }
+.gaia {font-family: arial, sans-serif; font-size: smaller; font-style: italic; }
+-->
+</style>
+</head>
+<body bgcolor="#F4FFE4">
+<form name="employee" method="post" action="/php/empform.php">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr bgcolor="#D5EDB3">
+    <td colspan="3" rowspan="2"><img src="../../logo3.jpg" alt="Header image" width="92" height="100" border="0" /></td>
+    <td height="50" colspan="1" id="logo" valign="bottom" align="left" nowrap="nowrap"> ADICHUNCHANAGIRI INSTITUTE OF TECHNOLOGY</td>
+    <td width="4">&nbsp;</td>    <td width="4">&nbsp;</td>    <td width="4">&nbsp;</td>
+  </tr>
+
+  <tr bgcolor="#D5EDB3">
+    <td height="51" colspan="3" id="tagline" valign="top" align="center"> AUTOMATED HIERARCHICAL MANAGEMENT SYSTEM </td>
+	<td width="4">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="7" bgcolor="#5C743D"><img src="../../mm_spacer.gif" alt="" width="1" height="2" border="0" /></td>
+  </tr>
+
+  <tr>
+    <td colspan="7" bgcolor="#99CC66" background="../../mm_dashed_line.gif"><img src="../../mm_dashed_line.gif" alt="line decor" width="4" height="3" border="0" /></td>
+  </tr>
+
+  <tr bgcolor="#99CC66">
+  	<td colspan="7" id="dateformat" height="20">&nbsp;&nbsp;<script language="JavaScript" type="text/javascript">
+      document.write(TODAY);	</script>	</td>
+  </tr>
+  <tr>
+    <td colspan="7" bgcolor="#99CC66" background="../../mm_dashed_line.gif"><img src="../../mm_dashed_line.gif" alt="line decor" width="4" height="3" border="0" /></td>
+  </tr>
+
+  <tr>
+    <td colspan="7" bgcolor="#5C743D"><img src="../../mm_spacer.gif" alt="" width="1" height="2" border="0" /></td>
+  </tr>
+
+ <tr>
+    <td width="165" valign="top" bgcolor="#5C743D">
+	<table border="0" cellspacing="0" cellpadding="0" width="165" id="navigation">
+        <tr>
+          <td width="165">&nbsp;<br /></td>
+        </tr>
+        <tr>
+          <td width="165"><a href="../../home.php" title="Home">HOME</a></td>
+        </tr>
+        <tr>
+          <td width="165"><a href="../../login/login.php" title="Login">LOGIN</a></td>
+        </tr>
+        <tr>
+          <td width="165"><a href="../services.php" title="Services">SERVICES</a></td>
+        </tr>
+        <tr>
+          <td width="165"><a href="../../aboutus/aboutus.php" title="About Us">ABOUT US</a></td>
+        </tr>
+        <tr>
+          <td width="165"><a href="../../contactus/contactus.php" title="Contact">CONTACT</a></td>
+        </tr>
+      </table>
+ 	 <br />
+  	&nbsp;<br />
+  	&nbsp;<br />
+  	&nbsp;<br /> 	</td>
+    <td width="50"><img src="../../mm_spacer.gif" alt="" width="50" height="1" border="0" /></td>
+    <td colspan="2" valign="top"><img src="../../mm_spacer.gif" alt="" width="305" height="1" border="0" /><br />
+	&nbsp;<br />
+	&nbsp;<br />
+	<table width="502" border="0" cellpadding="0" cellspacing="0" bordercolor="#000000">
+        <tr>
+          <td width="502" height="108" class="pageName"><p>&nbsp;</p>
+          <h3><strong>Employment Form</strong></h3>            </td>
+        </tr>
+
+		<tr>
+          <td height="744" class="bodyText">
+
+
+<fieldset name="Group1">
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <p><br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style2"> Name<font color='brown'>&nbsp;*</font>   		&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input name="name1" type="text" />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style2">&nbsp;  		Date-of-Birth&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  		yyyy
+  <select name="yyyy" tabindex="3">
+    <option>1972</option>
+    <option>1973</option>
+    <option>1974</option>
+    <option>1975</option>
+    <option>1976</option>
+    <option>1977</option>
+    <option>1978</option>
+    <option>1979</option>
+    <option>1980</option>
+    <option>1981</option>
+    <option>1982</option>
+    <option>1983</option>
+    <option>1984</option>
+    <option>1985</option>
+    <option>1986</option>
+    <option>1987</option>
+  </select>
+  &nbsp; mm
+  <select name="mm">
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+    <option>6</option>
+    <option>7</option>
+    <option>8</option>
+    <option>9</option>
+    <option>10</option>
+    <option>11</option>
+    <option>12</option>
+  </select>
+            dd
+            <select name="dd">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+              <option>7</option>
+              <option>8</option>
+              <option>9</option>
+              <option>10</option>
+              <option>11</option>
+              <option>12</option>
+              <option>13</option>
+              <option>14</option>
+              <option>15</option>
+              <option>16</option>
+              <option>17</option>
+              <option>18</option>
+              <option>19</option>
+              <option>20</option>
+              <option>21</option>
+              <option>22</option>
+              <option>23</option>
+              <option>24</option>
+              <option>25</option>
+              <option>26</option>
+              <option>27</option>
+              <option>28</option>
+              <option>29</option>
+              <option>30</option>
+              <option>31</option>
+            </select>
+            <br />
+            <br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br />
+  &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;<span class="style2">&nbsp;   		Sex&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;    		Male
+  <input name="gender" type="radio" value="m" checked="checked"/>
+  &nbsp;&nbsp;&nbsp;   		Female
+  <input name="gender" type="radio" value="f" />
+            <br />
+            <br />
+  &nbsp;&nbsp;&nbsp;<br />
+   &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+
+<span class="style2">Qualification</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;
+<input name="qualification" type="text" />
+            <br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br />
+  &nbsp;&nbsp; <br />
+   &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+
+
+
+<span class="style2">Category</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+            <select name="Select3">
+              <option>Teaching Staff</option>
+              <option>Non-teaching Staff</option>
+            </select>
+            <br />
+            <br />
+  &nbsp;&nbsp; <br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style2"> E-mail<font color='brown'>&nbsp;*</font>&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; 
+              <input name="Text2" type="text" />
+            <br />
+            <br />
+  &nbsp;&nbsp; <br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;<span class="style2">    		Phone</span>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;  &nbsp;  &nbsp;  &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; 
+             <input name="Text3" type="text" />
+            <br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br />
+  &nbsp;&nbsp; <br />
+   &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   		<span class="style2">Address&nbsp;&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <textarea name="TextArea1" rows="3"></textarea>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input name="Submit1" type="submit" value="submit" ONCLICK="return processform()"/>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br />
+  &nbsp;&nbsp;&nbsp; </p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br />
+            <br />
+            <br />
+            <br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </p>
+          </fieldset>
+</form>
+</td>
+		</tr>
+		<tr>
+		  <td height="195" class="bodyText"><p>&nbsp;</p>
+          </td>
+	    </tr>
+      </table>
+	 
+	&nbsp;	</td>
+    <td width="51"><img src="../../mm_spacer.gif" alt="" width="50" height="1" border="0" /></td>
+        <td width="230" valign="top"><br />
+		&nbsp;<br /></td>
+        <td width="4">&nbsp;</td>
+  </tr>
+ <tr>
+    <td colspan="7" bgcolor="#5C743D"><img src="../../mm_spacer.gif" alt="" width="1" height="2" border="0" /></td>
+  </tr>
+
+  <tr>
+    <td colspan="7" bgcolor="#99CC66" background="../../mm_dashed_line.gif"><img src="../../mm_dashed_line.gif" alt="line decor" width="4" height="3" border="0" /></td>
+  </tr>
+
+  <tr bgcolor="#99CC66">
+  	<td colspan="7" id="dateformat" height="20">
+    
+     <div id="footer">
+  <div class='copyright'> <div align="center">  <b><a href="../../home.php">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../aboutus/aboutus.php"> About Us</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../contactus/feedback.php">Send Feedback</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../contactus/contactus.php">Contact Us</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../contactus/help.php"> Help </a> </b></div></div></div>
+   
+    <div id="footer">
+  <div class='copyright'> <div align="center">Copyright © 2009 AHMS India Pvt Ltd. All rights reserved. </div>
+</div>
+   <div class='bestview'> <div align="center"> <div align="center">Best viewed in Mozilla 5.0 or IE 7.0 and above - Recommended screen resolution 1024 X 768   </div>
+   </div> 
+          
+   	</td>
+       
+  </tr>
+      
+  
+  <tr>
+    <td colspan="7" bgcolor="#99CC66" background="../../mm_dashed_line.gif"><img src="../../mm_dashed_line.gif" alt="line decor" width="4" height="3" border="0" /></td>
+  </tr>
+  
+   <tr>
+    <td colspan="7" bgcolor="#5C743D"><img src="../../mm_spacer.gif" alt="" width="1" height="2" border="0" /></td>
+  </tr> 
+  
+</table>
+
+</body>
+</html>

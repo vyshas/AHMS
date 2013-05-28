@@ -1,0 +1,73 @@
+<?session_start();
+
+$uid=$_SESSION['usrname'];
+$time=time();
+$date= date("Y-m-d");
+$from=$_POST["from"];
+$to=$_POST["to"];
+$reason=$_POST["reason"];
+$status='Pending';
+$mysql=mysql_connect("localhost","apache","ahms") or die("cannot connect");
+
+
+
+$date1=$from;
+$date2=$to;
+
+$res=mysql_db_query("student","select avleaves from employees where uid='$usrname'") or die("cannot query");
+
+//$r=mysql_db_query("student","insert into dummy values('$date1','$date2')") or die("cannot query");
+
+$rs=mysql_fetch_row($res);
+foreach($rs as $arr)
+{
+$al=$arr;
+}
+
+$time1=strtotime($date1);
+$time2=strtotime($date2);
+$resl=$time2-$time1;
+$q=24*60*60;
+$r=$resl/$q;
+
+echo $r."<br>";
+echo $al;
+if($r>$al)
+{
+ $qw='INVALID';
+ 
+$_SESSION['msg']=$qw;
+$_SESSION['leave']=$al;
+ 
+ header("location:/mysite/services/internal/employees/emp_lms.php");
+}
+
+
+//request id generation
+
+$code='LV';
+
+$res=mysql_db_query("student","select max(numb) from lms_emp")or die("cannot query");
+$result=mysql_fetch_row($res);
+foreach($result as $f)
+{
+ $numb=$f;
+}
+
+$numb++;
+$res=mysql_db_query("student","update lms_emp set numb='$numb' where uid='dummy'") or die("cannot query");
+$jobid=$code.'_'.$numb;
+
+$_SESSION['jobid']=$jobid;
+
+$res=mysql_db_query("student","insert into lms_emp values('$from','$to','$reason','$uid','$numb','$jobid','$status')") or die("Cannot query");
+
+
+
+$res=mysql_db_query("student","insert into history_emp values('$uid','Request for Leave','$date','$time','$jobid','$status')") or die("cannot query");
+
+header("location:/mysite/login/emp_ackn.php");
+//header("location:/mysite/services/internal/employees/emp_lms.php");
+
+?>
+

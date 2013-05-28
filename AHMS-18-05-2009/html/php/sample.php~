@@ -1,0 +1,28 @@
+<html>
+<body>
+
+
+
+
+
+<script language="javascript">
+function f()
+{
+var e=document.form1.asd.value;
+//alert(e);
+document.write("<?php $res="+e+"; ?>");
+document.write("<?php echo $res; ?>");
+}
+</script>
+
+
+
+<form method="post" name="form1">
+<input type="text" name="asd">
+<input type="button" value="click" onclick='f()'>
+</form>
+
+
+
+</body>
+</html>

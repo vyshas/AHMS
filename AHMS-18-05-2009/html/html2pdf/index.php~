@@ -1,0 +1,34 @@
+<html>
+<body>
+<?
+session_start();
+$url=$_SESSION['pageurl'];
+
+$a=split("\.",$url);
+
+$a[0]=$a[0]."_pdf";
+
+$furl=$a[0].".".$a[1];
+
+
+$furl="..".$furl;
+echo $furl;
+
+$fname=basename($furl);
+
+$array=split("\.",$fname);
+
+$output=$array[0].".pdf";
+
+require('html2fpdf.php');
+$pdf=new HTML2FPDF();
+$pdf->AddPage();
+$fp = fopen("$furl","r");
+$strContent = fread($fp, filesize("$furl"));
+fclose($fp);
+$pdf->WriteHTML($strContent);
+$pdf->Output("$output");
+echo "PDF file is generated successfully!";header("location:http://localhost/html2pdf/$output");
+?>
+</body>
+</html>

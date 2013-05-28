@@ -1,0 +1,39 @@
+<html>
+<body>
+<?php
+session_start();
+//$uid=$_SESSION['usrname'];
+$mysql=mysql_connect("localhost","apache","ahms");
+
+$r=mysql_db_query("student","select distinct(jobid),date,requesttype,time,status from history where uid='azad.05.cs' group by jobid order by date") or die ("Cannot query");
+echo "<center>";
+
+echo "<h1> MY HISTORY </h1>";
+
+echo "</center>";
+echo "<ul>";
+echo "<font color='brown'>JOBID";
+echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+echo "DATE";
+echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+echo "REQUEST TYPE</font><br><br>";
+
+while($array=mysql_fetch_row($r))
+{
+$i=0;
+
+echo $array[$i++];
+echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+echo $array[$i++];
+echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+echo $array[$i++];
+echo "<br>";
+}
+
+echo "</ul>";
+
+?>
+
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<?session_start();
+$uid=$_SESSION['usrname'];
+$edate=$_POST["edate"];
+$sub=$_POST["subject"];
+$date= date("Y-m-d");
+$time=time();
+$details=$_POST["textarea"];
+$status='Pending';
+
+$mysql=mysql_connect("localhost","apache","ahms")or die("cannot connect");
+
+//request id generation
+$code='MR';
+
+$res=mysql_db_query("student","select max(numb) from approval")or die("cannot query");
+$result=mysql_fetch_row($res);
+foreach($result as $f)
+{
+ $numb=$f;
+}
+
+
+$numb++;
+
+$res=mysql_db_query("student","update approval set numb='$numb' where uid='dummy'") or die("cannot query");
+
+$jobid=$code.'_'.$numb;
+$_SESSION['jobid']=$jobid;
+
+$res=mysql_db_query("student","insert into approval values('$edate','$sub','$details','$uid','$numb','$jobid','$status')") or die("cannot query");
+
+
+
+$res=mysql_db_query("student","insert into history values('$uid','Miscellaneous Request','$date','$time','$jobid','$status')") or die("cannot query");
+
+header("location:/mysite/login/internal_ackn.php");
+
+
+
+
+?>
+
